@@ -3,7 +3,7 @@
 @tailwind utilities;
 .cover-image {
   height: 500px;
-  width: 50vw;
+  /* width: 50vw; */
   width: 500px;
 }
 .image-box {
@@ -15,6 +15,15 @@
 
 .left-section-md {
   min-width: 50vw;
+}
+@media (max-height: 500px) {
+  .cover-image {
+    width: 256px;
+    height: 256px;
+  }
+
+  .left-section-md {
+  }
 }
 
 @media (max-width: 768px) {
