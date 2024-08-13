@@ -13,6 +13,10 @@
   place-items: center;
 }
 
+.left-section-md {
+  min-width: 50vw;
+}
+
 @media (max-width: 768px) {
   .cover-image {
     width: 256px;
@@ -27,13 +31,3 @@
     height: max-content;
   }
 }
-.left-section-md {
-  min-width: 50vw;
-}
-
-/* @media (min-width: 399px) { */
-.mt-me-auto {
-  margin-top: 28px;
-  /* border-radius: 0; */
-}
-/* } */
