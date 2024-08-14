@@ -100,7 +100,7 @@ const volume_slider = document.querySelector("#input-volume");
 
 volume_slider.addEventListener("input", function () {
   const value = this.value;
-  this.style.background = `linear-gradient(to right, black ${value}%, gray ${value}%)`;
+  this.style.background = `linear-gradient(to right, black ${value * 100}%, gray ${value * 100}%)`;
   currentSong.volume = value;
 });
 progress_input.addEventListener("input", function () {
@@ -112,4 +112,3 @@ progress_input.addEventListener("input", function () {
   // console.log("timelin", currentSong.currentTime)
 });
 
-currentSong.addEventListener("");
