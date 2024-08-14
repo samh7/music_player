@@ -18,13 +18,25 @@
 .left-section-md {
   min-width: 50vw;
 }
+
+.modal-bottom {
+  bottom: 128px;
+}
+
 @media (max-height: 500px) {
   .cover-image {
     width: 256px;
     height: 256px;
   }
 
-  .left-section-md {
+  /* .modal-bottom {
+    bottom: 80px;
+  } */
+}
+
+@media (max-height: 300px) {
+  .modal-bottom {
+    bottom: 20px;
   }
 }
 
@@ -32,7 +44,6 @@
   .cover-image {
     width: 326px;
     height: 326px;
-
   }
   .left-section-md {
     min-width: 20vw;
@@ -42,7 +53,19 @@
   }
 }
 
-.progress{
+@media (min-width: 768px) {
+  .modal-bottom {
+    bottom: 226px;
+    @media (max-height: 500px) {
+      bottom: 80px;
+    }
+    @media (max-height: 300px) {
+      bottom: 20px;
+    }
+  }
+}
+
+.progress {
   background: linear-gradient(to right, black 0%, gray 0%);
   border-radius: 8px;
   height: 7px;
@@ -51,9 +74,8 @@
   transition: background 450ms ease-in;
   -webkit-appearance: none;
 }
-.volume{
+.volume {
   background: linear-gradient(to right, black 100%, gray 100%);
-  
 }
 
 .progress::-webkit-slider-thumb {
@@ -65,10 +87,9 @@
   background: #434343;
 }
 
-.song-name{
+.song-name {
   font-size: 18px;
   /* font-weight: 600; */
   font-style: normal;
   font-family: "Poppins", sans-serif;
-
 }
