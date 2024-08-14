@@ -39,3 +39,26 @@
     height: max-content;
   }
 }
+
+.progress{
+  background: linear-gradient(to right, black 0%, gray 0%);
+  border-radius: 8px;
+  height: 7px;
+  /* width: 400px; */
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+.volume{
+  background: linear-gradient(to right, black 100%, gray 100%);
+  
+}
+
+.progress::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #434343;
+}
