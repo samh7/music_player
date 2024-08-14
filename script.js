@@ -46,13 +46,20 @@ prevBtn.addEventListener("click", () => {
 const updateSong = (action) => {
   currentSong.pause();
   currentSong.currentTime = 0;
+  // currentSong.style.background = `linear-gradient(to right, black 0%, gray 0%)`;
 
   if (action === "next") {
     current++;
+    progress_input.value = 0;
+    
+    progress_input.style.background = `linear-gradient(to right, black 0%, gray 0%)`;
     if (current > songs.length - 1) current = 0;
   }
   if (action === "prev") {
     current--;
+    progress_input.value = 0;
+    progress_input.style.background = `linear-gradient(to right, black 0%, gray 0%)`;
+
     if (current < 0) current = songs.length - 1;
   }
   currentSong = songs[current].ele;
@@ -62,7 +69,7 @@ const updateSong = (action) => {
 const playPauseSong = () => {
   if (currentSong.paused) {
     currentSong.play();
-    currentSong.volume = 0.4
+    currentSong.volume = 0.4;
     playPauseIcon.src = "./assets/pause-solid.svg";
   } else {
     currentSong.pause();
@@ -87,7 +94,7 @@ const volume_slider = document.querySelector("#input-volume");
 volume_slider.addEventListener("input", function () {
   const value = this.value;
   this.style.background = `linear-gradient(to right, black ${value}%, gray ${value}%)`;
-  currentSong.volume = value ;
+  currentSong.volume = value;
 });
 progress_input.addEventListener("input", function () {
   const value = this.value;
