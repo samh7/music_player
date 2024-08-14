@@ -78,7 +78,11 @@ const playPauseSong = () => {
 };
 
 currentSong.addEventListener("timeupdate", function () {
-  progress_input.value = Math.floor((currentSong.currentTime / currentSong.duration) * 100);
+  const value = Math.floor(
+    (currentSong.currentTime / currentSong.duration) * 100
+  );
+  progress_input.value = value;
+  progress_input.style.background = `linear-gradient(to right, black ${value}%, gray ${value}%)`;
 });
 //////////////
 
