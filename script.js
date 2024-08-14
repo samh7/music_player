@@ -254,7 +254,7 @@ setTimer.addEventListener("click", function () {
   const counter = asyncCounter(1);
   isTimer = true;
   unsetTimer.classList.remove("cursor-not-allowed");
-  const logWhenFinished = async () => {
+  const WaitForTimer = async () => {
     modal.classList.add("hidden");
 
     const timer = await counter;
@@ -265,7 +265,7 @@ setTimer.addEventListener("click", function () {
       }
     }
   };
-  logWhenFinished();
+  WaitForTimer();
   setTimeout(() => counter.count(), timerInput.value);
   // setTimeout(() => counter.count(), 1000);
 });
@@ -284,3 +284,15 @@ closeModal.addEventListener("click", function () {
 
 // logWhenFinished();
 // // Output after a second:
+
+addEventListener("load", function () {
+  document.querySelector(".loader").classList.remove("show-loader");
+  const counter = asyncCounter(1);
+
+  const WaitForTimer = async () => {
+    const timer = await counter;
+    document.querySelector(".main-player").classList.remove("hidden");
+  };
+  WaitForTimer();
+  setTimeout(() => counter.count(), 3000);
+});

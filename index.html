@@ -13,121 +13,180 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="md:flex mt-14 mb-10 md:mt-0 mx-3 md:mx-7 bg-red-50">
-    <div class="image-box md:mr-7 justify-center px-30 h-full w-full">
-      <img
-        src="./assets/girl.png"
-        class="cover-image object-cover rounded-md"
-        alt=""
-      />
+  <body class="bg-red-50">
+    <!-- <div class="loader-box"> -->
+    <div class="loader show-loader">
+      <div class="load-text">
+        <div class="loaded-text">M</div>
+        <div class="loading-text">usic Player</div>
+      </div>
     </div>
-    <div class="left-section-md flex flex-col items-center justify-center">
-      <div class="mt-10 flex space-x-2 items-center md:mt-0">
-        <span id="start-timeline" class="timeline">00:00</span>
-        <input
-          id="input-progress"
-          class="progress w-52 lg:w-96"
-          type="range"
-          value="0"
-          min="0"
-          max="100"
-          name=""
-          id=""
-        />
-        <span id="end-timeline" class="timeline">00:00</span>
-
-        <!-- <div
-          class="h-1.5 w-60 lg:w-96 bg-black rounded-l-md rounded-r-md"
-        ></div>
-        <div class="w-4 h-4 -mt-3 ml-32 rounded-full bg-green-300"></div> -->
-      </div>
-      <div class="song-name mt-6 song-name">Arise</div>
-      <div class="mt-6 song-name">NCS</div>
-      <div class="flex items-center space-x-5 lg:space-x-10 mt-6">
+    <!-- music player -->
+    <div class="main-player md:flex hidden mt-14 mb-10 md:mt-0 mx-3 md:mx-7">
+      <div class="image-box md:mr-7 justify-center px-30 h-full w-full">
         <img
-          src="./assets/icons/repeat.svg"
-          class="repeat-button w-7 h-7"
-          alt=""
-        />
-        <img src="./assets/icons/prev.svg" class="previous w-7 h-7" alt="" />
-        <img src="./assets/icons/pause.svg" class="play-pause w-7 h-7" alt="" />
-        <img src="./assets/icons/next.svg" class="next w-7 h-7" alt="" />
-        <img
-          src="./assets/icons/shuffle-gray.svg"
-          class="shuffle-button w-8 h-8"
+          src="./assets/girl.png"
+          class="cover-image object-cover rounded-md"
           alt=""
         />
       </div>
-      <div class="flex mt-6 items-center">
-        <img src="./assets/volume-low-solid.svg" class="mute w-7 h-7" alt="" />
-        <div class="mx-5">
+      <div class="left-section-md flex flex-col items-center justify-center">
+        <div class="mt-10 flex space-x-2 items-center md:mt-0">
+          <span id="start-timeline" class="timeline">00:00</span>
           <input
-            id="input-volume"
-            class="progress volume w-60 lg:w-96"
+            id="input-progress"
+            class="progress w-52 lg:w-96"
             type="range"
-            value="1"
+            value="0"
             min="0"
-            max="1"
-            step="0.01"
+            max="100"
             name=""
             id=""
           />
+          <span id="end-timeline" class="timeline">00:00</span>
+
+          <!-- <div
+          class="h-1.5 w-60 lg:w-96 bg-black rounded-l-md rounded-r-md"
+        ></div>
+        <div class="w-4 h-4 -mt-3 ml-32 rounded-full bg-green-300"></div> -->
         </div>
-        <img
-          src="./assets/volume-high-solid.svg"
-          class="full-volume w-7 h-7"
-          alt=""
-        />
+        <div class="song-name mt-6 song-name">Arise</div>
+        <div class="mt-6 song-name">NCS</div>
+        <div class="flex items-center space-x-5 lg:space-x-10 mt-6">
+          <img
+            src="./assets/icons/repeat.svg"
+            class="repeat-button w-7 h-7"
+            alt=""
+          />
+          <img src="./assets/icons/prev.svg" class="previous w-7 h-7" alt="" />
+          <img
+            src="./assets/icons/pause.svg"
+            class="play-pause w-7 h-7"
+            alt=""
+          />
+          <img src="./assets/icons/next.svg" class="next w-7 h-7" alt="" />
+          <img
+            src="./assets/icons/shuffle-gray.svg"
+            class="shuffle-button w-8 h-8"
+            alt=""
+          />
+        </div>
+        <div class="flex mt-6 items-center">
+          <img
+            src="./assets/volume-low-solid.svg"
+            class="mute w-7 h-7"
+            alt=""
+          />
+          <div class="mx-5">
+            <input
+              id="input-volume"
+              class="progress volume w-60 lg:w-96"
+              type="range"
+              value="1"
+              min="0"
+              max="1"
+              step="0.01"
+              name=""
+              id=""
+            />
+          </div>
+          <img
+            src="./assets/volume-high-solid.svg"
+            class="full-volume w-7 h-7"
+            alt=""
+          />
+        </div>
+        <div class="flex mt-6 space-x-5 lg:space-x-10">
+          <img src="./assets/subtitle.png" class="lyrics w-8 h-8" alt="" />
+          <img
+            src="./assets/icons/heart.svg"
+            class="fav-button w-8 h-8"
+            alt=""
+          />
+          <img src="./assets/night.png" class="sleep-button w-7 h-7" alt="" />
+          <img src="./assets/song-lyrics.png" class="w-7 h-7" alt="" />
+          <img src="./assets/dots.png" class="w-7 h-7" alt="" />
+        </div>
       </div>
-      <div class="flex mt-6 space-x-5 lg:space-x-10">
-        <img src="./assets/subtitle.png" class="lyrics w-8 h-8" alt="" />
-        <img src="./assets/icons/heart.svg" class="fav-button w-8 h-8" alt="" />
-        <img src="./assets/night.png" class="sleep-button w-7 h-7" alt="" />
-        <img src="./assets/song-lyrics.png" class="w-7 h-7" alt="" />
-        <img src="./assets/dots.png" class="w-7 h-7" alt="" />
-      </div>
-    </div>
-    
-    <div class="modal hidden "
-    >
-      <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="fixed  inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-        <div class="fixed modal-bottom inset-0 z-10 w-screen overflow-y-auto">
-          <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-            <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-              <div class="bg-white px-4 pb-3 pt-3 sm:p-6 sm:pb-2">
-                <div class="sm:flex sm:items-start">
-                  <div class="relative">
-                    <div class="mx-auto relative flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                      <img src="./assets/night.png" class="w-7 h-7" alt="" />
-                  
+
+      <div class="modal hidden">
+        <div
+          class="relative z-10"
+          aria-labelledby="modal-title"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+            aria-hidden="true"
+          ></div>
+          <div class="fixed modal-bottom inset-0 z-10 w-screen overflow-y-auto">
+            <div
+              class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+            >
+              <div
+                class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
+              >
+                <div class="bg-white px-4 pb-3 pt-3 sm:p-6 sm:pb-2">
+                  <div class="sm:flex sm:items-start">
+                    <div class="relative">
+                      <div
+                        class="mx-auto relative flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10"
+                      >
+                        <img src="./assets/night.png" class="w-7 h-7" alt="" />
+                      </div>
+                      <div class="absolute right-0 top-0">
+                        <img
+                          src="./assets/icons/close.svg"
+                          class="close-modal h-5 w-5"
+                          alt=""
+                        />
+                      </div>
                     </div>
-                    <div class="absolute right-0 top-0">
-                      <img src="./assets/icons/close.svg" class="close-modal h-5 w-5" alt="">
-                      </div>  
-                  </div>
-                  <div class="mt-1 text-center sm:ml-2 sm:mt-0 sm:text-left">
-                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Set Sleep Timer</h3>
-                    <div class="mt-2">
-                      <!-- <p class="text-sm text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
+                    <div class="mt-1 text-center sm:ml-2 sm:mt-0 sm:text-left">
+                      <h3
+                        class="text-base font-semibold leading-6 text-gray-900"
+                        id="modal-title"
+                      >
+                        Set Sleep Timer
+                      </h3>
+                      <div class="mt-2">
+                        <!-- <p class="text-sm text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
                         -->
-                      <input class="timer-value border-2 w-72 md:w-96  border-red-200 p-1 rounded-md" placeholder="Time in milliseconds" type="text">
+                        <input
+                          class="timer-value border-2 w-72 md:w-96 border-red-200 p-1 rounded-md"
+                          placeholder="Time in milliseconds"
+                          type="text"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="bg-gray-50 -mt-2 mb-2 px-4 py-2 sm:flex sm:flex-row-reverse sm:px-4">
-                <div class="flex h-6 mt-1 items-center space-x-3 justify-center">
-                  <button type="button" class="h-10 grid place-items-center set-timer w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto">Set Timer</button>
-                  <button type="button" class="h-10 unset-timer grid place-items-center  w-full justify-center rounded-md cursor-not-allowed bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-sm  hover:bg-yellow-500 sm:ml-3 sm:w-auto">Unset Timer</button>
-                  
+                <div
+                  class="bg-gray-50 -mt-2 mb-2 px-4 py-2 sm:flex sm:flex-row-reverse sm:px-4"
+                >
+                  <div
+                    class="flex h-6 mt-1 items-center space-x-3 justify-center"
+                  >
+                    <button
+                      type="button"
+                      class="h-10 grid place-items-center set-timer w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto"
+                    >
+                      Set Timer
+                    </button>
+                    <button
+                      type="button"
+                      class="h-10 unset-timer grid place-items-center w-full justify-center rounded-md cursor-not-allowed bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 sm:ml-3 sm:w-auto"
+                    >
+                      Unset Timer
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
     </div>
-    </body>
+  </body>
 </html>
