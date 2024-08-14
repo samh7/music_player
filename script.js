@@ -51,7 +51,7 @@ const updateSong = (action) => {
   if (action === "next") {
     current++;
     progress_input.value = 0;
-    
+
     progress_input.style.background = `linear-gradient(to right, black 0%, gray 0%)`;
     if (current > songs.length - 1) current = 0;
   }
@@ -77,6 +77,9 @@ const playPauseSong = () => {
   }
 };
 
+currentSong.addEventListener("timeupdate", function () {
+  progress_input.value = Math.floor((currentSong.currentTime / currentSong.duration) * 100);
+});
 //////////////
 
 // const progress = document.querySelectorAll(".progress");
