@@ -786,6 +786,13 @@ video {
   background: #434343;
 }
 
+.song-name{
+  font-size: 18px;
+  /* font-weight: 600; */
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
 @media (min-width: 768px) {
   .md\:mx-7 {
     margin-left: 1.75rem;
