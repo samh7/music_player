@@ -4,7 +4,6 @@ const squeakyAudio = new Audio("./sound/squeaky.mp3");
 const hopeAudio = new Audio("./sound/hope.mp3");
 const janjiAudio = new Audio("./sound/Janji.mp3");
 
-// selecting elements
 const prevBtn = document.querySelector(".previous");
 const playBtn = document.querySelector(".play-pause");
 const nextBtn = document.querySelector(".next");
@@ -23,7 +22,6 @@ let shuffle = false;
 let mute = false;
 const modal = document.querySelector(".modal");
 
-// let fav = false;
 const songs = [
   { ele: hopeAudio, audioName: "Hope", fav: false },
   { ele: forceAudio, audioName: "Force", fav: false },
@@ -80,7 +78,6 @@ shuffleBtn.addEventListener("click", function () {
 });
 
 favBtn.addEventListener("onload", function () {
-  // songs[current].fav = !songs[current].fav;
   if (songs[current].fav) {
     this.src = "assets/icons/heart-full.svg";
   } else {
@@ -195,8 +192,6 @@ const getTwoNumber = (number) => {
   return `${number}`;
 };
 
-//////////////
-
 const progress_input = document.querySelector("#input-progress");
 const volume_slider = document.querySelector("#input-volume");
 
@@ -213,7 +208,6 @@ progress_input.addEventListener("input", function () {
   currentSong.currentTime = Math.floor(
     (value / 100) * currentSong.duration - 1
   );
-  // console.log("timelin", currentSong.currentTime)
 });
 
 const setTimer = document.querySelector(".set-timer");
@@ -267,14 +261,13 @@ setTimer.addEventListener("click", function () {
   };
   WaitForTimer();
   setTimeout(() => counter.count(), timerInput.value);
-  // setTimeout(() => counter.count(), 1000);
 });
 
 closeModal.addEventListener("click", function () {
   modal.classList.add("hidden");
 });
 
-// const logWhenFinished = async () =>
+// const WaitForTimer = async () =>
 //   console.log(`Finished counting to ${await counter}!`);
 
 // // Somewhere else, async code
@@ -282,7 +275,7 @@ closeModal.addEventListener("click", function () {
 // setTimeout(() => counter.count(), 1000);
 // // `counter` resolves the second time `counter.count` is called
 
-// logWhenFinished();
+// WaitForTimer();
 // // Output after a second:
 
 addEventListener("load", function () {
